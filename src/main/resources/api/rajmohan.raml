@@ -1,0 +1,48 @@
+#%RAML 1.0
+title: rajmohan
+version: R1
+description: "i am rajamohan"
+protocols: [http,https]
+mediaType: 
+- application/json
+traits:
+  query: !include /traits/trait.raml
+/addition:
+  get:
+    is: [query]
+    responses:
+      200:
+        body:
+         example: !include examples/response/addition-response.json  
+/subtraction:
+  delete:
+    is: [query]
+    responses:
+      200:
+        body:
+         example: !include examples/response/subtraction-response.json          
+    
+/multipication:
+  post:
+    is: [query]
+    responses:
+      200:
+        body:
+         example: !include examples/response/1-multipication-response.json             
+/division:
+  post:
+    is: [query]
+    responses:
+      200:
+        body:
+          
+            example: !include examples/response/1-division-response.json      
+
+              
+      
+
+             
+          
+      
+        
+      
